@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Парикмахер Онлайн</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Парикмахер Онлайн</h1>
+    <nav>
+      <button onclick="showPage('schedule')">📅 Расписание</button>
+      <button onclick="showPage('reviews')">📝 Отзывы</button>
+      <button onclick="showPage('settings')">⚙️ Настройки</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Расписание -->
+    <section id="schedule" class="page">
+      <h2>Расписание</h2>
+      <div id="calendar"></div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="page hidden">
+      <h2>Отзывы клиентов</h2>
+      <form id="reviewForm">
+        <textarea placeholder="Оставьте отзыв..." required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <div id="reviewsList"></div>
+    </section>
+
+    <!-- Настройки -->
+    <section id="settings" class="page hidden">
+      <h2>Настройки</h2>
+      <label>Выбор темы:
+        <select id="themeSelect">
+          <option value="light">Светлая</option>
+          <option value="dark">Тёмная</option>
+          <option value="blue">Синяя</option>
+          <option value="green">Зелёная</option>
+          <option value="pink">Розовая</option>
+        </select>
+      </label>
+      <label>Шрифт:
+        <select id="fontSelect">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Courier New">Courier New</option>
+        </select>
+      </label>
+    </section>
+  </main>
+</body>
+</html>
